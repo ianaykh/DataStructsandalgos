@@ -12,36 +12,51 @@ namespace ConsoleApplication1
         {
             int[] arr1 = { 2,34,56,7,8,33 };
             int[] arr = {8,7, 6, 5, 4, 3, 2, 1 };
-            #region Selection sort 
+            int temp;
+            //#region Selection sort 
 
-            int min, temp;
-            for (int i = 0; i < arr.Length -1; i++)
-            {
-                min = i;
-                for (int j = i+1; j < arr.Length; j++)
-                {
-                    if(arr[min] > arr[j])
-                    {
-                        min = j;
-                    }
+            //int min;
+            //for (int i = 0; i < arr.Length -1; i++)
+            //{
+            //    min = i;
+            //    for (int j = i+1; j < arr.Length; j++)
+            //    {
+            //        if(arr[min] > arr[j])
+            //        {
+            //            min = j;
+            //        }
 
-                }
-                temp = arr[min];
-                arr[min] = arr[i];
-                arr[i] = temp;
+            //    }
+            //    temp = arr[min];
+            //    arr[min] = arr[i];
+            //    arr[i] = temp;
 
-            }
+            //}
+            //#endregion
+
+
+            //#region bubblesort
+
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    for (int j = 0; j < arr.Length-i-1; j++)
+            //    {
+            //        if (arr[j] > arr[j + 1])
+            //        {
+            //            temp = arr[j];
+            //            arr[j] = arr[j + 1];
+            //            arr[j + 1] = temp;
+            //        }
+            //    }
+            //}
+
+
+            //#endregion
+
+            #region Insertionsort
+
+
             #endregion
-
-
-            #region bubblesort
-
-
-
-
-            #endregion
-
-
 
 
         }
