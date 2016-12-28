@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -53,11 +54,37 @@ namespace ConsoleApplication1
 
             //#endregion
 
-            #region Insertionsort
+            //#region Insertionsort
+            //int hole, val;
+            //for (int i = 1; i < arr.Length; i++)
+            //{
+            //    hole = i;
+            //    val = arr[hole];
+            //    while(hole>0 && arr[hole - 1] > val)
+            //    {
+            //        arr[hole] = arr[hole - 1];
+            //        hole--;
+            //    }
+            //    arr[hole] = val;
 
+            //}
+
+            //#endregion
+
+            #region Mergesort
+
+            
 
             #endregion
 
+            #region Quicksort
+            #endregion
+
+
+           
+
+          
+            
 
         }
     }
