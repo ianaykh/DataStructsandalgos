@@ -73,18 +73,102 @@ namespace ConsoleApplication1
 
             #region Mergesort
 
-            
+
 
             #endregion
 
-            #region Quicksort
+            #region Quicksort                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
             #endregion
 
 
-           
+            //#region right rotation
+            //int[] newa = new int[arr.Length];
+            //Console.WriteLine("Enter a rotation ");
+            //int n = int.Parse(Console.ReadLine());
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    if (i + n < arr.Length)
+            //    {
+            //        newa[i + n] = arr[i];
+            //    }
+            //    else
+            //    {
+            //        newa[i + n - arr.Length] = arr[i];
+            //    }
+            //}
 
-          
+            //#endregion
+            //#region right rotation 
+            //int[] newa = new int[arr.Length];
+            //Console.WriteLine("Enter a rotation ");
+            //int n = int.Parse(Console.ReadLine());
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    if (i - n >= 0)
+            //    {
+            //        newa[i - n] = arr[i];
+            //    }
+            //    else
+            //    {
+            //        newa[(i - n) + arr.Length] = arr[i];
+            //    }
+            //}
+
+            ////#endregion
+
+
+            //string a = Console.ReadLine();
+            //string b = Console.ReadLine();
+
+            //a = a.ToLower();
+            //b = b.ToLower();
+
+            //Dictionary<char, int> alphacount = new Dictionary<char, int>();
+            //Dictionary<char, int> alphacount2 = new Dictionary<char, int>();
+            //for (char c = 'a'; c <= 'z'; c++)
+            //{
+            //    alphacount.Add(c, 0);
+            //}
+
+
+            //for(int i = 0; i < a.Length; i++)
+            //{
+            //    if (alphacount.ContainsKey(a[i]))
+            //    {
+            //        alphacount[a[i]] += 1;
+            //    }
+            //}
+            //for (int i = 0; i < b.Length; i++)
+            //{
+            //    if (alphacount.ContainsKey(b[i]))
+            //    {
+            //        alphacount2[b[i]] += 1;
+            //    }
+            //}
+
+            //int count = 0;
+
+            //for(int i = 0; i < alphacount.Count; i++)
+            //{
+            //    if(alphacount != alphacount2)
+            //    {
+            //        if()
+            //    }
+
+            //}
+
+            LinkedList L = new LinkedList();
+            L.Addatstart(8);
+            L.addatend(56);
+            L.addatend(45);
             
+            L.deletefromstart();
+            L.deletefromend();
+            L.displaylist();
+
+
+
+
 
         }
     }
