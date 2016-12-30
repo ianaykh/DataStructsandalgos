@@ -156,19 +156,28 @@ namespace ConsoleApplication1
             //    }
 
             //}
+            //#region Linked list 
+            //LinkedList L = new LinkedList();
+            //L.Addatstart(8);
+            //L.addatend(56);
+            //L.addatend(45);
 
-            LinkedList L = new LinkedList();
-            L.Addatstart(8);
-            L.addatend(56);
-            L.addatend(45);
-            
-            L.deletefromstart();
-            L.deletefromend();
-            L.displaylist();
+            //L.deletefromstart();
+            //L.deletefromend();
+            //L.displaylist();
+            //#endregion
 
 
+            #region Binary tree 
 
 
+            BinaryTree T = new BinaryTree();
+            T.InsertNode(55);
+            T.InsertNode(33);
+            T.InsertNode(91);
+            T.InsertNode(26);
+            T.DisplayBTree();
+            #endregion
 
         }
     }
