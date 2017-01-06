@@ -9,11 +9,63 @@ namespace ConsoleApplication1
 {
     class Program
     {
+
+        private static string result;
+
+
+
+        #region ZigZag matrix print 
+        public static String Convert(String s, int nRows)
+        {
+            // Start typing your Java solution below
+            // DO NOT write main() function
+            int i = 0;
+            if (nRows <= 1) return s;
+            StringBuilder[] list = new StringBuilder[nRows];
+            for (i = 0; i < nRows; i++) list[i] = new StringBuilder();
+            int row = 0;
+            int j = 0;
+            bool down = true;
+            while (i < s.Length && j < s.Length)
+            {
+                list[row].Append(s.ElementAt(j));
+                if (row == 0) down = true;
+                if (row == nRows - 1) down = false;
+                if (down) row++;
+                else row--;
+                j++;
+            }
+            StringBuilder res = new StringBuilder();
+            return "";
+        }
+        #endregion
+
+        #region Check if number is prime or not 
+        public static bool IsPrime(int n)
+        {
+            bool IsPrime = true;
+            for (int i = 2; i < n - 1; i++)
+            {
+                if (n % i == 0)
+                {
+                    IsPrime = false;
+                }
+            }
+
+            return IsPrime;
+
+        }
+        #endregion
         static void Main(string[] args)
         {
             int[] arr1 = { 2, 34, 56, 7, 8, 33 };
-            int[] arr = { 8, 7, 6, 5, 4, 3, 2, 1 };
-           
+            int[] arr = { 8, 7, 6, 5, 4, 3, 2, 1, 8, 5, 6 };
+
+            //Convert("PayPalishiring",4);
+
+            Console.WriteLine(IsPrime(100));
+
+
             //#region Selection sort 
 
             //int min;
@@ -107,8 +159,7 @@ namespace ConsoleApplication1
 
             #endregion
 
-            #region Quicksort                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-            #endregion
+
 
             #endregion
             //#region right rotation
@@ -236,55 +287,88 @@ namespace ConsoleApplication1
             //{
             //    result += Math.Abs(i);
             //}
-            #region stack brackets 
-            //    List<string> result = new List<string>();
-            //    int t = Convert.ToInt32(Console.ReadLine());
-            //    for (int a0 = 0; a0 < t; a0++)
-            //    {
-            //        string s = Console.ReadLine();
-            //        char[] chararr = s.ToCharArray();
-            //        Stack<char> charstack = new Stack<char>();
-            //        foreach (char c in chararr)
-            //        {
+            //#region stack brackets 
+            ////    List<string> result = new List<string>();
+            ////    int t = Convert.ToInt32(Console.ReadLine());
+            ////    for (int a0 = 0; a0 < t; a0++)
+            ////    {
+            ////        string s = Console.ReadLine();
+            ////        char[] chararr = s.ToCharArray();
+            ////        Stack<char> charstack = new Stack<char>();
+            ////        foreach (char c in chararr)
+            ////        {
 
 
-            //            if (c == '{' || c == '(' || c == '[')
-            //                {
-            //                    charstack.Push(c);
-            //                }
+            ////            if (c == '{' || c == '(' || c == '[')
+            ////                {
+            ////                    charstack.Push(c);
+            ////                }
 
-            //            else
-            //            {
-            //                if(charstack.Count == 0)
-            //                {
-            //                    break;
-            //                }
-            //                else
-            //                if (c == '}' || c == ')' || c == ']')
-            //                {
-            //                    char topchar = charstack.Peek();
+            ////            else
+            ////            {
+            ////                if(charstack.Count == 0)
+            ////                {
+            ////                    break;
+            ////                }
+            ////                else
+            ////                if (c == '}' || c == ')' || c == ']')
+            ////                {
+            ////                    char topchar = charstack.Peek();
 
-            //                    if(c=='}' && topchar=='{' || c==']' && topchar=='[' || c == ')' && topchar=='(')
-            //                    {
-            //                        charstack.Pop();
-            //                    }
-            //                }
+            ////                    if(c=='}' && topchar=='{' || c==']' && topchar=='[' || c == ')' && topchar=='(')
+            ////                    {
+            ////                        charstack.Pop();
+            ////                    }
+            ////                }
 
-            //            }
+            ////            }
 
 
-            //        }
+            ////        }
 
-            //        if (charstack.Count == 0) result.Add("YES"); else result.Add("NO");
-            //    }
+            ////        if (charstack.Count == 0) result.Add("YES"); else result.Add("NO");
+            ////    }
 
-            //    foreach (var item in result)
-            //    {
-            //        Console.WriteLine(item);
-            //    }
+            ////    foreach (var item in result)
+            ////    {
+            ////        Console.WriteLine(item);
+            ////    }
 
-            //}
-            #endregion
+            ////}
+            //#endregion
+
+            //#region Heaps
+
+            //#endregion
+
+            int n = int.Parse(Console.ReadLine());
+            int m = int.Parse(Console.ReadLine());
+            Hashtable h1 = new Hashtable();
+            Hashtable h2 = new Hashtable();
+            string s = Console.ReadLine();
+          
+            int i = 0;
+            string[] charar = s.Split(' ').ToArray();
+            foreach (var item in charar)
+            {
+                h1.Add(i,item);
+                i++;
+            }
+            i = 0;
+            string s1 = Console.ReadLine();
+            charar = s1.Split(' ').ToArray();
+            foreach (var item in charar)
+            {
+                h2.Add(i, item);
+                i++;
+            }
+            if (h2.Contains(h1))
+            {
+                Console.WriteLine("yes");
+            }
+
+
+
         }
         public static void mergesort(int[] arr, int p, int q)
         {
@@ -293,9 +377,86 @@ namespace ConsoleApplication1
                 int mid = (p + q) / 2;
                 mergesort(arr, p, mid);
                 mergesort(arr, mid + 1, q);
-               
+
             }
         }
-       
+        public static void quicksort(int[] arr, int low, int high)
+        {
+            if (low < high)
+            {
+                int pi = Partition(arr, low, high);
+
+
+            }
+        }
+        public static int Partition(int[] arr, int low, int high)
+        {
+            int pivot = arr[high];
+            int i = low;
+            for (int j = low; j <= high; j++)
+            {
+                if (arr[j] <= pivot)
+                {
+                    i++;
+
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+            return 0;
+        }
+    }
+
+    public sealed class Circle
+    {
+        private double radius;
+
+        public double Calculate(Func<double, double> op)
+        {
+            return op(radius);
+        }
+    }
+    public class A : IComparable<Employee>
+    {
+        public int a;
+        public void calc()
+        {
+            Console.WriteLine("Class A");
+        }
+
+        public int CompareTo(Employee E)
+        {
+            return Math.Max(E.EID,0);
+        }
+    }
+
+    public class Employee
+    {
+        public string name { get; set; }
+        public int EID { get; set; }
+    }
+
+
+
+
+
+    public class B : C
+    {
+        public int b;
+        public void calcB()
+        {
+        }
+
+        public override void s()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public abstract class C
+    {
+        abstract public void s();
+
     }
 }
