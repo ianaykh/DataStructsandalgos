@@ -45,10 +45,14 @@
   <ItemGroup>
     <Compile Include="BinaryTree.cs" />
     <Compile Include="BTNode.cs" />
+    <Compile Include="Driver.cs" />
+    <Compile Include="Graph.cs" />
+    <Compile Include="IVehicle.cs" />
     <Compile Include="LinkedList.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vertex.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

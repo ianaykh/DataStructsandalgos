@@ -11,33 +11,35 @@ namespace ConsoleApplication1
     {
 
         private static string result;
+        private static int val;
 
+       
 
 
         #region ZigZag matrix print 
-        public static String Convert(String s, int nRows)
-        {
-            // Start typing your Java solution below
-            // DO NOT write main() function
-            int i = 0;
-            if (nRows <= 1) return s;
-            StringBuilder[] list = new StringBuilder[nRows];
-            for (i = 0; i < nRows; i++) list[i] = new StringBuilder();
-            int row = 0;
-            int j = 0;
-            bool down = true;
-            while (i < s.Length && j < s.Length)
-            {
-                list[row].Append(s.ElementAt(j));
-                if (row == 0) down = true;
-                if (row == nRows - 1) down = false;
-                if (down) row++;
-                else row--;
-                j++;
-            }
-            StringBuilder res = new StringBuilder();
-            return "";
-        }
+        //public static String Convert(String s, int nRows)
+        //{
+        //    // Start typing your Java solution below
+        //    // DO NOT write main() function
+        //    int i = 0;
+        //    if (nRows <= 1) return s;
+        //    StringBuilder[] list = new StringBuilder[nRows];
+        //    for (i = 0; i < nRows; i++) list[i] = new StringBuilder();
+        //    int row = 0;
+        //    int j = 0;
+        //    bool down = true;
+        //    while (i < s.Length && j < s.Length)
+        //    {
+        //        list[row].Append(s.ElementAt(j));
+        //        if (row == 0) down = true;
+        //        if (row == nRows - 1) down = false;
+        //        if (down) row++;
+        //        else row--;
+        //        j++;
+        //    }
+        //    StringBuilder res = new StringBuilder();
+        //    return "";
+        //}
         #endregion
 
         #region Check if number is prime or not 
@@ -63,9 +65,35 @@ namespace ConsoleApplication1
 
             //Convert("PayPalishiring",4);
 
-            Console.WriteLine(IsPrime(100));
+            //Console.WriteLine(IsPrime(100));
+            string[] tokens_a0 = Console.ReadLine().Split(' ');
+            int a0 = Convert.ToInt32(tokens_a0[0]);
+            int a1 = Convert.ToInt32(tokens_a0[1]);
+            int a2 = Convert.ToInt32(tokens_a0[2]);
+            string[] tokens_b0 = Console.ReadLine().Split(' ');
+            int b0 = Convert.ToInt32(tokens_b0[0]);
+            int b1 = Convert.ToInt32(tokens_b0[1]);
+            int b2 = Convert.ToInt32(tokens_b0[2]);
+            List<int> score = new List<int>();
+            int res = 0, res2 = 0;
+            for (int l = 0; l < tokens_a0.Length; l++)
+            {
+                int.TryParse(tokens_a0[l], out res);
+                int.TryParse(tokens_a0[l], out res2);
+                if (res>res2)
+                {
+                    score[0] += 1;
+                }
+                else
+                {
+                    score[1] += 1;
+                }
+            }
 
-
+            for (int t = 0; t < score.Count; t++)
+            {
+                Console.WriteLine(score[t]);
+            }
             //#region Selection sort 
 
             //int min;
@@ -417,7 +445,9 @@ namespace ConsoleApplication1
             return op(radius);
         }
     }
-    public class A : IComparable<Employee>
+
+
+       public class A : IComparable<Employee>
     {
         public int a;
         public void calc()
@@ -443,9 +473,11 @@ namespace ConsoleApplication1
 
     public class B : C
     {
+        
         public int b;
         public void calcB()
         {
+            r = 90;
         }
 
         public override void s()
@@ -456,7 +488,13 @@ namespace ConsoleApplication1
 
     public abstract class C
     {
-        abstract public void s();
+         public void s();
+        protected int r;
 
+
+        public void change()
+        {
+            r = 9;
+        }
     }
 }
